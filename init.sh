@@ -1,6 +1,6 @@
 #!/bin/sh
 sudo dnf update -y
-sudo dnf install vim chromium java-1.8.0-openjdk java-devel git-gui tmux screen curl w3m ncurses-compat-libs kernel-devel kernel-headers xcopy -y
+sudo dnf install vim chromium java-1.8.0-openjdk java-devel git-gui tmux screen curl w3m ncurses-compat-libs kernel-devel kernel-headers xcopy unixODBC-devel -y
 sudo dnf install libappindicator -y
 sudo rpm -ivh ~/Downloads/skypeforlinux-64.rpm
 sudo dnf install docker docker-client -y
@@ -25,3 +25,6 @@ echo "see http://wiki.netbeans.org/FaqRunningOnJre"
 
 touch ~/.Xauthority
 xauth add ${HOST}:0 . $(xxd -l 16 -p /dev/urandom)
+curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
+sudo dnf install mssql-tools
+sudo ln -s /opt/mssql-tools/bin/sqlcmd /usr/local/bin/sqlcmd
