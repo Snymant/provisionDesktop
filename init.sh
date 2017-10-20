@@ -1,6 +1,6 @@
 #!/bin/sh
 sudo dnf update -y
-sudo dnf install vim chromium java-1.8.0-openjdk java-devel git-gui tmux screen curl w3m ncurses-compat-libs kernel-devel kernel-headers -y
+sudo dnf install vim chromium java-1.8.0-openjdk java-devel git-gui tmux screen curl w3m ncurses-compat-libs kernel-devel kernel-headers xcopy -y
 sudo dnf install libappindicator -y
 sudo rpm -ivh ~/Downloads/skypeforlinux-64.rpm
 sudo dnf install docker docker-client -y
@@ -19,7 +19,7 @@ sudo rpm -ivh ~/Downloads/slack-2.8.1-0.1.fc21.x86_64.rpm
 sudo rpm -ivh ~/Downloads/skypeforlinux-64.rpm
 sudo dnf install code -y
 sudo dnf install nodejs npm -y
-
+cp .tmux.conf ~/.tmux.conf
 
 echo "see http://wiki.netbeans.org/FaqRunningOnJre"
 
