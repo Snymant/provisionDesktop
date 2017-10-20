@@ -1,0 +1,3 @@
+to setup / confige / compile vm
+sudo su -      
+vmware-modconfig --console --install-all
