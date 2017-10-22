@@ -1,3 +1,10 @@
+download vmware from 
+https://download3.vmware.com/software/player/file/VMware-Player-14.0.0-6661328.x86_64.bundle
+
+chmod +x VMware-Player-14.0.0-6661328.x86_64.bundle
+./VMware-Player-14.0.0-6661328.x86_64.bundle
+
 to setup / confige / compile vm
+
 sudo su -      
 vmware-modconfig --console --install-all
